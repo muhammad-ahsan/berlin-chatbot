@@ -1,10 +1,13 @@
-# Disable sudo to speed up the build
-sudo: false
+dist: xenial
 language: python
+branches:
+  only:
+    - master
 python: 3.6
+virtualenv:
+  system_site_packages: true
 # command to install dependencies
 install:
-  - bundle install
   - pip install --user -r requirements.txt
   - pip install .
 # command to run tests
