@@ -1,4 +1,4 @@
-from src.chatbot import chatbot_ping
+from berlinchatbot.chatbot import chatbot_ping
 
 
 def test_chatbot_ping():

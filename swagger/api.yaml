@@ -6,7 +6,7 @@ paths:
   /v1/health:
     get:
       summary: Get health of service endpoint
-      operationId: berlin-chatbot.utils.health_check
+      operationId: berlinchatbot.utils.health_check
       tags:
         - health
       responses:
@@ -21,7 +21,7 @@ paths:
   /v1/chat:
     post:
       summary: Get health of service endpoint
-      operationId: berlin-chatbot.chatbot.chatbot_response
+      operationId: berlinchatbot.chatbot.chatbot_response
       tags:
         - Chatbot
       parameters:
