@@ -1,0 +1,65 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Berlin Chatbot
+paths:
+  /v1/health:
+    get:
+      summary: Get health of service endpoint
+      operationId: src.utils.health_check
+      tags:
+        - health
+      responses:
+        200:
+          description: Health status of service endpoint
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /v1/chat:
+    post:
+      summary: Get health of service endpoint
+      operationId: src.chatbot.chatbot_response
+      tags:
+        - Chatbot
+      parameters:
+        - name: query
+          in: path
+          required: false
+          schema:
+            type: string
+      responses:
+        200:
+          description: Reply from chatbot
+        default:
+          description: Chatbot reply as json
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Reply"
+components:
+  schemas:
+    Reply:
+      required:
+        - transaction_id
+        - question
+        - answer
+      properties:
+        transaction_id:
+          type: string
+        question:
+          type: string
+        answer:
+          type: string
+    Error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
