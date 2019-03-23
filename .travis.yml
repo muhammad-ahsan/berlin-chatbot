@@ -4,8 +4,6 @@ branches:
   only:
     - master
 python: 3.6
-virtualenv:
-  system_site_packages: true
 # command to install dependencies
 install:
   - bundle install
