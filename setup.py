@@ -1,9 +1,9 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='berlin-chatbot',
     version='1.0',
-    packages=['berlinchatbot', ],
+    packages=find_packages(),
     license='MIT License',
     long_description=open('README.md').read(),
 )
