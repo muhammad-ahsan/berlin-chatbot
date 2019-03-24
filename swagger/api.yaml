@@ -20,7 +20,7 @@ paths:
                 $ref: "#/components/schemas/Error"
   /v1/chat:
     post:
-      summary: Get health of service endpoint
+      summary: Return the response og user query
       operationId: berlinchatbot.chatbot.chatbot_response
       tags:
         - Chatbot
