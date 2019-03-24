@@ -11,3 +11,8 @@ def chatbot_response():
         return 'Berlin chatbot: hey whats up ...'
 
     return 'I am not well trained enough to answer your query {}'.format(query)
+
+
+# Implement machine learning based smart both to replace dump hardcoded response.
+class SmartChatBot:
+    pass
